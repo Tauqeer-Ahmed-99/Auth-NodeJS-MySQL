@@ -1,0 +1,22 @@
+CREATE TABLE `auth`.`users` (
+  `uid` INT NOT NULL AUTO_INCREMENT UNIQUE,
+  `fullname` VARCHAR(100) NOT NULL,
+  `username` VARCHAR(20) NOT NULL,
+  `email` VARCHAR(100) NOT NULL UNIQUE,
+  `password_hash` LONGTEXT NOT NULL,
+  `phone` VARCHAR(20) NULL UNIQUE,
+  `birth_date` DATETIME NULL,
+  `address_line_1` VARCHAR(100) NULL,
+  `address_line_2` VARCHAR(100) NULL,
+  `city` VARCHAR(50) NULL,
+  `state` VARCHAR(50) NULL,
+  `postal_code` VARCHAR(10) NULL,
+  `created_at` DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
+  `refresh_token` LONGTEXT NULL,
+  `refresh_token_expires_at` DATETIME NULL,
+  `region` VARCHAR(20) NULL,
+  `country` VARCHAR(45) NULL,
+  `country_iso` VARCHAR(5) NULL,
+  PRIMARY KEY (`uid`)
+  );
