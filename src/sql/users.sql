@@ -1,7 +1,7 @@
 CREATE TABLE `auth`.`users` (
   `uid` INT NOT NULL AUTO_INCREMENT UNIQUE,
   `fullname` VARCHAR(100) NOT NULL,
-  `username` VARCHAR(20) NOT NULL,
+  `username` VARCHAR(20) NOT NULL UNIQUE,
   `email` VARCHAR(100) NOT NULL UNIQUE,
   `password_hash` LONGTEXT NOT NULL,
   `phone` VARCHAR(20) NULL UNIQUE,
